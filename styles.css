@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #a5a394;
+    color: #333;
+}
+
+.header {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(180deg, #66625d, #221c17);
+    color: #fff;
+    text-align: center;
+    padding: 4em 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin: 0.5em 0 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.featured-poem, .library-intro {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 4em ;
+}
+.poem-card {
+    background: #f7f7f7;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0 .2);
+}
+
+.poem-title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-family: "im fell dw pica", serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+.poem-excerpt {
+    font-family: "caveat brush", cursive;
+    font-weight: 400;
+    margin: 1em 0;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #a29bfe;
+}
+
+.btn {
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1em 2.5em;
+    background: #8f5f49;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.btns {
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1em 2.5em;
+    background: #8f5f49;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 25px;
+    margin-bottom: -25px;
+}
+
+.btn:hover {
+    background: #a3887b;
+    transform: translateY(-2px);
+}
+.btns:hover {
+    background: #a3887b;
+    transform: translateY(-2px);
+}
+
+.footer {
+    text-align: center;
+    padding: 2em 0;
+    background: #f7f7f7;
+    color: #666;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.poem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    margin: 2em 0;
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(30px); /* Initial offset */
+    animation: fadeIn 1s ease forwards; /* Trigger animation */
+}
+.poem-cards {
+    background: #f7f7f7;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    transform: scale(1); /* Default state */
+    margin-bottom: 10px;
+    margin: 2em;
+}
+.poem-cards:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0 .2);
+}
+.poem-titles{
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-family: "im fell dw pica", serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+.read-more {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.read-more:hover {
+    color: #a29bfe;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.poem-preview {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 2em 0;
+    background: transparent;
+}
+.poem-preview h2{
+    text-align: center;
+    font-family: Verdana, Geneva;
+}
+.preview-slider {
+    display: inline-flex;
+    position: absolute;
+    animation: slidePreview 20s linear infinite;
+    white-space: nowrap;
+}
+
+.preview-card {
+    display: inline-flex;
+    flex-direction: column;
+    width: 300px;
+    height: 150px;
+    margin: 20px 10px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.preview-card:hover {
+    transform: translateY(-5px);
+}
+
+.preview-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-family: "im fell dw pica", serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+.preview-excerpt {
+    font-family: "caveat brush", cursive;
+    font-size: 0.9em;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-align: left;
+}
+
+@keyframes slidePreview {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-110%);
+    }
+}
+/* Add visibility when grid is in viewport */
+.poem-grid.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.spotify-player {
+    background: #f4f4f4;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.spotify-search {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#spotify-url {
+    padding: 0.8em;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 60%;
+}
+
+#play-song {
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #634632;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#play-song:hover {
+    background-color: #5f5c4f;
+}
+.maintain{
+    text-align: center;
+    margin-top: 0;
+}

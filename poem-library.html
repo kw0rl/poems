@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <script>
+        // Function to update Spotify player
+        function updateSpotifyPlayer() {
+            const input = document.getElementById("spotify-url").value;
+            const spotifyEmbed = document.getElementById("spotify-embed");
+            
+            // Extract the track ID from the Spotify URL
+            const regex = /track\/([a-zA-Z0-9]+)/;
+            const match = input.match(regex);
+
+            if (match && match[1]) {
+                const trackId = match[1];
+                spotifyEmbed.innerHTML = `
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/${trackId}" 
+                        width="100%" 
+                        height="80" 
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allow="encrypted-media">
+                    </iframe>`;
+            } else {
+                alert("Please enter a valid Spotify track link.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">poem library</h1>
+            <p class="subtitle">dive into a collection of heartfelt verses</p>
+            <a href="index.html" class="btns">back to home</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="spotify-player">
+            <h2>Listen While Reading</h2>
+            <div class="spotify-search">
+                <input
+                    type="text"
+                    id="spotify-url"
+                    placeholder="Paste Spotify song link here..."
+                />
+                <button id="play-song" onclick="updateSpotifyPlayer()">Play</button>
+            </div>
+            <div id="spotify-embed">
+                <!-- Default Spotify iframe -->
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/51rfRCiUSvxXlCSCfIztBy?utm_source=generator&theme=0" 
+                width="100%" 
+                height="152" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+            </div>
+        </section>
+        
+        <section class="poem-grid">
+            <div class="container">
+                <div class="poem-cards">
+                    <h3 class="poem-titles">loml</h3>
+                    <p class="poem-excerpt">the last of my letter<br>
+                        in the labyrinthine of his mind<br>
+                        struggling to find the answer<br>
+                        somewhere in gray nebulous<br>
+                        could he sense of uncertainty<br>
+                        my boy only knows what he wants<br>
+                        only knows what he should have<br>
+                        and no the action presents<br>
+                        amidst the twilight's melancholy hue<br>
+                        you give me a sign to dance<br>
+                        an ambivalent dance, conflicting brew<br>
+                        i could hear your mellifluous voice while we're watching Veronica ephemerally<br>
+                        and we were playing some unknown game<br>
+                        lost the game with no disappointments<br>
+                        but never your face somewhere in front of my eyes<br>
+                        the ephemeral dance of our tangled hearts<br>
+                        we waltz between doubt and hope<br>
+                        eventually we waltz between hope and doubt<br>
+                        not sure where to start<br>
+                        yet uncertainty lingers like a tattoo kiss<br>
+                        never ending saga<br>
+                        i want you to know<br>
+                        every our delicate dance<br>
+                        every tangled knots in the fabric<br>
+                        becomes a nuisance to us<br>
+                        and welcoming an unwelcome dance<br>
+                        this letter is not truly my last letter<br>
+                        because it holds an encapsulated lifeline.<br>
+                    </p>
+                    
+                </div>
+
+                <div class="poem-cards">
+                    <h3 class="poem-titles">The messages</h3>
+                    <p class="poem-excerpt">there were two graves and i was the gun<br>
+                        i'm taking the first grave:<br>
+                        the moment of cold moon<br>
+                        waving to the ghost<br>
+                        watching it through the window<br>
+                        couldn't even say one thing<br>
+                        as you sure the floor cracked as you dance with it<br>
+                        why would you still remain standing there?<br>
+                        you show the enthusiasm toward it so hard<br>
+                        not even bother to move from the floor<br>
+                        we were so delicate<br>
+                        it tries to present in your air<br>
+                        because it feels like a rarest air<br>
+                        for not sure certain times before<br>
+                        and you are not sure either wants to be there<br>
+                        you said you'd come and get me but it
+                        seems like it's not<br>
+                        you look so pale<br>
+                        what led you into that?<br>
+                        that such maladies<br>
+                        did i cause it?<br>
+                        no one could even cure them<br>
+                        did i left it to you?<br>
+                        am i killing your joy?<br>
+                        i supposed said "burn that witch!" then<br>
+                        don't you die<br>
+                        you'll find someone<br>
+                        you can mark my word, i said it first<br>
+                        no one want it, but someone will to you<br>
+                        no such thing to worry<br>
+                        your time will come at the right time.<br>   
+                    </p>
+                    
+                </div>
+                <div class="poem-cards">
+                    <h3 class="poem-titles">is that sleepless midnights</h3>
+                    <p class="poem-excerpt">isn't it cruel if i say "come here if you need me"?<br>
+                        when the castle won't crumble if i did not step in<br>
+                        i'm sorry,<br>
+                        sorry<br>
+                        one month's sleepless month<br>
+                        i don't know how to save me<br>
+                        when i was rambling and it didn't make sense<br>
+                        crying like you do<br>
+                        it was sleepless nights<br>
+                        what the hell did i do<br>
+                        saying i miss you<br>
+                        saying i loved you<br>
+                        maybe we can be transparent telling all the lies we kept for<br>
+                        i don't mind if it was about a year of mess that it did to you<br>
+                        at least it sounds like it makes sense<br>
+                        late night talk<br>
+                        hand wrapped in a hand<br>
+                        light gesture caressed on cheek<br>
+                        the gazes locked<br>
+                        i miss that<br>
+                        i love that<br>
+                        one more sleepless night<br>
+                        you color my dream<br>
+                        we smiled through that imaginary world<br>
+                        you defended me from the tiger i fear the most<br>
+                        then cool me down<br>
+                        and found myself wide awake every three or four in the morning<br>
+                        maybe i'm the problem<br>
+                        i can say bunches of words, poets, articles, histories, stories, lies, truths, debates<br>
+                        but i am bad at showing actions<br>
+                        yes, i was wrong <br>
+                        don't want to feel this blue<br>
+                        that i miss you<br>
+                        when my sun still lingers your sky<br>
+                        the only thing that left is my love to you<br>
+                        the love you that you may you won't have it the same<br>
+                        one month sleepless night<br>
+                        is that midnights.<br>
+                    </p>
+                </div>
+                <div class="poem-cards">
+                    <h3 class="poem-titles">dear reader</h3>
+                    <p class="poem-excerpt">dear reader,<br>
+                        why would stop?<br>
+                        without any excuses left?<br>
+                        what got into your thoughts?<br>
+                        <br>
+                        dear reader,<br>
+                        i cry in restless night<br>
+                        the heavy stone hit on my chest i could say it<br>
+                        i play our music on stereo every night<br>
+                        try to kill the time looking forward to all passes<br>
+                        <br>
+                        dear reader,<br>
+                        you saw me in different way now<br>
+                        nor the priority one to you<br>
+                        i can feel the pain, can’t you?<br>
+                        you utter all those words<br>
+                        yet i ruined the words<br>
+                        my apologies<br>
+                    </p>
+                </div>
+                <div class="poem-cards">
+                    <h3 class="poem-titles">he</h3>
+                    <p class="poem-excerpt">cheap thoughts conquering<br>
+                        whether he made it or not<br>
+                        yet still not<br>
+                        
+                        why does he look energetic today?<br>
+                        is there something behind him?<br>
+                        something we couldn’t see?<br>
+                        
+                        he sat on the stair<br>
+                        looked up at the blanket of stars that stretched to infinity<br>
+                        and cursed at the wind<br>
+                        
+                        he broked his own heart<br>
+                        and try to remember everything<br>
+                        end up been down at lowest<br>
+                        
+                        he tried to escape from reality<br>
+                        hoping that the expectation comes true<br>
+                        letting go everything past<br>
+                    </p>
+                </div>
+                <div class="poem-cards">
+                    <h3 class="poem-titles">thoughts</h3>
+                    <p class="poem-excerpt">sometimes theres kinda a point i think, “am i really that bad?”. it’s pretty hilarious how you can transform from the one who used to spread love, positivity to people but now just a silent dumb in a room lonely. i wonder how could i be blocked by certain people and now there are only few left? shit life is scary af not even know what gonna happen in future ;). why does everyone changing though? i couldn’t even figure it out what is the reason for people to change like is it necessary for you? cant you just stay remain same? even my self changing but shit i wanna cry at the corner of wall😞. why everyone is so cruel. 
+                    </p>
+                </div>
+                <div class="poem-cards">
+                    <h3 class="poem-titles">nuisance</h3>
+                    <p class="poem-excerpt">nuisance does feel bad<br>
+                        when it comes to 2am<br>
+                        <br>
+                        all thoughts conquering<br>
+                        comes from any perspective of him<br>
+                        that he doesn’t like<br>
+                        <br>
+                        nuisance name of you<br>
+                        <br>
+                        oh to be good if it is still exist<br> 
+                        but no longer hi and bye<br>
+                        that made him smile in delight<br>
+                        in the end of a movie<br>
+                        nothing left<br>
+                        <br>
+                        but<br>
+                        <br>
+                        nuisance is a leave<br>
+                        an old leave<br>
+                        that i had to sweep away<br>
+                        because i don’t know<br> 
+                        whether<br>
+                        this leave still in good or either way<br>
+                        <br>
+                        the main reason is<br>
+                        uncertainty feeling<br>
+                        that made me did that<br>
+                        but this leave seems happy<br>
+                        when he can live in his own life now<br>
+                        no more think<br> 
+                        no more care<br>
+                        only him in his best life<br>
+                        i feel glad and happy for him<br>
+                        see you in lucid dream<br>
+                        which i hope it won’t happen<br>
+                        oh<br>
+                    </p>
+                </div>
+                <div class="maintain">
+                <h2>in maintenace. more will be added later hehe dah pergi main sana</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; azrul hensem. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
