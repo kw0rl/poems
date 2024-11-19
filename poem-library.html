@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <script defer src="darkmode.js"></script>
+    <!-- Add this in the <head> section -->
+<script defer src="spotify-search.js"></script>
     <script>
         // Function to update Spotify player
         function updateSpotifyPlayer() {
@@ -38,6 +41,10 @@
 </head>
 <body>
     <header class="header">
+        <button onclick="toggleTheme()" class="theme-toggle button" aria-label="Toggle dark mode">
+            <span class="button-text">🌓</span>
+            <div class="fill-container"></div>
+        </button>        
         <div class="container">
             <h1 class="title">poem library</h1>
             <p class="subtitle">dive into a collection of heartfelt verses</p>
@@ -47,18 +54,18 @@
 
     <main>
         <section class="spotify-player">
-            <h2>Listen While Reading</h2>
+            <h2>listen while reading</h2>
             <div class="spotify-search">
                 <input
-                    type="text"
-                    id="spotify-url"
-                    placeholder="Paste Spotify song link here..."
-                />
-                <button id="play-song" onclick="updateSpotifyPlayer()">Play</button>
+                type="text"
+                id="song-search"
+                placeholder="search a song..."/>
+                <button id="search-button">search</button>
             </div>
+            <div class="search-results" id="search-results"> <!-- Search results will appear here --></div>
             <div id="spotify-embed">
-                <!-- Default Spotify iframe -->
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/51rfRCiUSvxXlCSCfIztBy?utm_source=generator&theme=0" 
+                <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/track/1xtw1krCR6Dw2KwkXw5z63?utm_source=generator" 
                 width="100%" 
                 height="152" 
                 frameBorder="0" 
@@ -271,6 +278,39 @@
                         see you in lucid dream<br>
                         which i hope it won’t happen<br>
                         oh<br>
+                    </p>
+                </div>
+                <div class="poem-cards">
+                    <h3 class="poem-titles">best thing</h3>
+                    <p class="poem-excerpt">
+                        walked to the realm like a hopeless me<br>
+                        reality fades whispers on the breeze<br>
+                        on that cold starry night you hold the key<br>
+                        follow along me hide somewhere unseen<br>
+                        <br>
+                        a patient came to me<br>
+                        "doc i am bleeding<br>
+                        what it could be such wound maladies"<br>
+                        your cries as sharp as scalpels cutting part of you<br>
+                        <br>
+                        you were in me<br>
+                        rest in me<br>
+                        voice of me soothes your anxiety<br> 
+                        the chaos will meet its peace<br>
+                        i know you like the back of my hand dear<br>
+                        <br>
+                        and i was 20 again<br>
+                        in aching meeting him<br>
+                        you healed my wound<br>
+                        while im in tears<br>
+                        <br>
+                        "it was not real...<br>
+                        but it mended something inside me"<br>
+                        something reminded me those storms ruined us<br>
+                        all the king's horses, all the king's men<br>
+                        couldn't put us together again<br>
+                        i woke whole<br>
+                        smile for the medicine of moment<br>
                     </p>
                 </div>
                 <div class="maintain">
