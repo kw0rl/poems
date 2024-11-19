@@ -12,9 +12,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+<script defer src="darkmode.js"></script>
+<!-- Add this in the <head> section -->
+    <script defer src="spotify-search.js"></script>
 </head>
 <body>
     <header class="header">
+        <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle dark mode">
+            🌓
+        </button>
         <div class="container">
             <h1 class="title">The Drafts</h1>
             <p class="subtitle">Where words dance to the rhythm of emotion</p>
@@ -115,13 +121,19 @@
                         comes from any perspective of him<br>
                         that he doesn’t like<br>
                 </div>
+                <div class="preview-card">
+                    <h3 class="preview-title">best thing</h3>
+                    <p class="preview-excerpt">walked to the realm like a hopeless me<br>
+                        reality fades whispers on the breeze<br>
+                        on that cold starry night you hold the key<br></p>
+                </div>
             </div>
         </div>
         <section class="library-intro">
             <div class="container">
                 <h2>Discover More of My Poems :)</h2>
                 <p>Browse through the collection of poems about my personal life, love, conflict, self-esteem, and everything in between.</p>
-                <a href="poem-library.html" class="btn">Explore the Library</a>
+                <a href="poem-library.html" class="btns">Explore the Library</a>
             </div>
         </section>
     </main>
