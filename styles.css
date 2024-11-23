@@ -300,6 +300,42 @@ body {
     text-align: center;
     margin-top: 0;
 }
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px; /* Space between grid items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .instagram-post {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: 20px; /* Space between grid items */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  }
+  .instagram-post blockquote {
+    width: 100% !important;
+    /* Adjust max-width to make posts smaller */
+    max-width: 350px !important;
+    margin: 0 auto;
+    display: block;
+  }
+ /* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .instagram-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .instagram-grid {
+      grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+  }
 
 /* Dark mode toggle button */
 .theme-toggle {
@@ -434,3 +470,4 @@ body, .header, .poem-card, .poem-cards, .preview-card, .footer {
   .button:hover .fill-container::after {
     transform: translateY(0);
   }
+  
